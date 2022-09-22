@@ -1,0 +1,31 @@
+<body style="background-color: rgba(230, 255, 5, 0.212); height: 100%;">
+    <header class="Login-Senha">
+
+        <img src="assets/images/Livro.jpg" alt="Livro" class="Lbaner">
+        
+        <form class="Formulario">
+            <div class="form-Email">
+                <h3 class="Email">E-mail</h3>
+                <input type="e-mail" id="e-Mail" label="E-mail" placeholder="E-mail" class="Box-E" [(ngModel)]=" userModel.email" name="email">
+            </div>
+
+            <!--Email-->
+
+            <!--Senha-->
+
+            <div class="form-Email">
+                <h3 class="Email">Senha</h3>
+                <input type="password" id="Passw" label="Password" placeholder="*****" class="Box-E"   [(ngModel)]="userModel.password" name="password">
+            </div>
+
+            <DIV class="Validar" style="margin-top:10px;">
+                <button type="submit" id="Entrar" class="btn btn-outline-warning" (click)="receberDados()" >Entrar</button>
+                <button type="button" class="btn btn-outline-warning">Cadastrar-se</button>
+            
+            </DIV>
+
+        </form>
+    </header>
+
+    <!--FIM-->
+</body>

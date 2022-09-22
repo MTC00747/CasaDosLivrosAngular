@@ -1,0 +1,100 @@
+/*Estilização do Topo*/
+.Topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    Border: solid black 1px;
+    background-color: rgb(11, 15, 2)
+}
+
+/*Container Para centralização*/
+.container-gid {
+    display: flex;
+    justify-content: space-between;
+    align-items: Center;
+    max-width: 1200px;
+
+}
+
+.logo {
+    width: 250px
+}
+
+.mostraMenu {
+    left: -80% !important;
+}
+
+.Menu {
+    Display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    text-decoration: None;
+    Color: white;
+    Margin: 10px;
+    font-family: Roboto;
+    Font-size: 18px;
+}
+.menu a:hover{
+    background-color: yellow;
+}
+.menu-Ham {
+    display: None;
+}
+/*Fim da estilazação do TOPO + Menu*/
+
+/*MENU + TOPO RESPONSIVO*/
+@media screen and (max-width: 991px) {
+    Header .topo {
+        padding: 0 20px;
+    }
+
+    .container-gid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /*Alinha os itens de cima para baixo*/
+        position: Fixed;
+        height: 100vh;
+        width: 80%;
+        Top: 0;
+        left: 0%;
+        /*Esconde o Menu*/
+        z-index: 100;
+        /*Sobrepõe camadas*/
+        background-color: rgba(224, 235, 78, 1);
+        border-radius: 0 0 0 40px;
+        transition: left 1.5s;
+        /*Tempo de transição do valor leftS*/
+
+
+
+
+    }
+
+    .menu a {
+        font-size: 1.5rem;
+        color: black;
+        padding-top: 10px;
+        padding-left: 15px;
+        margin-left: 45px;
+        border-left: dotted 3px black;
+
+    }
+
+    .menu-Ham {
+        display: block;
+        width: 45px;
+        padding-right: 10px;
+
+    }
+}
+/*Fim do  Estilizaçãoc Menu Tablet*/
