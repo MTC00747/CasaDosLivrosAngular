@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "MatheusCavalcanti@Hotmail.com",
+      "password": "$2a$10$bspXC30yO3gMQJPR.Nk4aO6Zm7tmhhUmgAiSNrZr56lZDN9OTH.5S",
+      "id": 2
+    },
+    {
+      "email": "douglasw@hotmail.com",
+      "password": "Senha05",
+      "id": 3
+    },
+    {
+      "email": "douglasd@hotmail.com",
+      "password": "$2a$10$Y.1CD0f7uRMxc1TyXb7Tl.QrSVVaobFX6L5tgfuNmovMltTlzm7iG",
+      "id": 4
+    }
+  ]
+}
