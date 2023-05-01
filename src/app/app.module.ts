@@ -7,18 +7,22 @@ import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
-import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { LoginComponent } from './views/login/login.component';
+import { MenuBarComponent } from './views/menu-bar/menu-bar.component';
+import { BannerCarrouselComponent } from './views/banner-carrousel/banner-carrousel.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    MenuBarComponent,
+    BannerCarrouselComponent,
+
     
   ],
   imports: [

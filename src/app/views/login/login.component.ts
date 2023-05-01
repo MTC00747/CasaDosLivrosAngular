@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import { User } from 'src/app/Models/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -27,17 +27,17 @@ export class LoginComponent implements OnInit {
       }
     });
 
-    if (this.userModel.email == "" || this.userModel.password == "" || Ataque > 0) {//palavra proibida ou se esqueeu de preencher algum campo 
+    if (this.userModel.email == "" || this.userModel.senha == "" || Ataque > 0) {//palavra proibida ou se esqueeu de preencher algum campo 
       this.Mensagem = "Preencher os campos corretamente";
     } else {
       //Disparando a funcionaldiade logar usuario 
       this.userService.logarUsuario(this.userModel).subscribe({
-        next: (response) => {
+        next: (response: any) => {
           console.log("Deu certo!")
           console.log(response)
           this.Mensagem = "Logado com sucesso";
         },
-        error: (err) => {
+        error: (err: { error: string; }) => {
           console.log("Deu Erro!")
           console.log(err)
           this.Mensagem = err.error;

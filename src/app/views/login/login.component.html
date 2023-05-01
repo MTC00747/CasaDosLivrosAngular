@@ -1,5 +1,5 @@
 <body style="background-color: rgba(230, 255, 5, 0.212); height: 100%;">
-    <header class="Login-Senha">
+    <div class="Login-Senha">
 
         <img src="assets/images/Livro.jpg" alt="Livro" class="Lbaner">
         
@@ -15,7 +15,7 @@
 
             <div class="form-Email">
                 <h3 class="Email">Senha</h3>
-                <input type="password" id="Passw" label="Password" placeholder="*****" class="Box-E"   [(ngModel)]="userModel.password" name="password">
+                <input type="password" id="Passw" label="Password" placeholder="*****" class="Box-E"   [(ngModel)]="userModel.senha" name="senha">
             </div>
 
             <DIV class="Validar" style="margin-top:10px;">
@@ -25,7 +25,7 @@
             </DIV>
             {{Mensagem}}
         </form>
-    </header>
+    </div>
 
     <!--FIM-->
 </body>
