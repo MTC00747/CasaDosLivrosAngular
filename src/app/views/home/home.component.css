@@ -4,7 +4,7 @@
 .Barra {
     border: 1px solid black;
     width: 40%;
-    background-color: rgba(224, 235, 78, 1);
+    background-color: rgba(181, 184, 0, 0.904);
     Margin: auto;
     margin-top: 10px;
 }
@@ -15,76 +15,7 @@
     text-align: Center;
 
 }
-
-/*Menu2 Categorias inicio*/
-.menu2 {
-    display: Flex;
-    flex-direction: row;
-    justify-content: center;
-    Border: 1px Solid black;
-    background-color: black;
-}
-
-.mais-Vendidos a {
-    text-decoration: None;
-    Color: white;
-    font-family: Russo;
-    font-size: 1.5rem;
-    border-right: 2px solid white;
-    margin: 10px;
-    padding: 10px;
-}
-
-.mais-Vendidos a:hover {
-    background-color: yellow;
-}
-
-.mais-Vendidos {
-
-    max-width: 1200px;
-}
-
-
 /*Fim da categorais mais vendidos*/
-/*Inicio dos produtos*/
-.produtos {
-    height: 1920px;
-    border: black 1px solid;
-    background-image: linear-gradient(rgb(0, 0, 0), rgb(95, 95, 18));
-}
-
-.row {
-
-    display: flex;
-    justify-content: center;
-}
-
-.ação h2 {
-    font-family: russo;
-    color: white;
-    margin-left: 250px;
-}
-
-.card {
-    max-width: 300PX;
-}
-
-.card-body {
-    background-color: black;
-}
-
-.card-title {
-    color: white;
-}
-
-.card-text {
-    color: white;
-}
-
-.veja-Mais {
-    margin-left: 250px;
-    margin-top: 15px;
-}
 
 /*Fim de produtos|Inicio de quem somos*/
 
@@ -122,7 +53,7 @@
     height: 300px;
     Display: flex;
     justify-content: space-around;
-    background-color: rgb(65, 65, 1);
+    background-color: rgba(181, 184, 0, 0.904);
     margin-top: 5px;
     align-items: center;
 }

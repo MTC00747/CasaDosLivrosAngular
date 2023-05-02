@@ -1,0 +1,72 @@
+.card-livro_container {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.card-livro_Anterior {
+    margin-top: 160px;
+    height: 40px;
+    margin-left: 10px;;
+}
+
+.card-livro_Proximo {
+    margin-left: 10px;
+    margin-top: 160px;
+    height: 40px;
+    
+}
+.card-livro_propriedades:hover {
+    transform: scale(1.05);
+  }
+.card-livro_propriedades {
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    border: 2px solid black;
+    border-radius: 12px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.267);
+
+    margin-bottom: 60px;
+    margin-left: 20px;
+
+    width: 270px;
+    height: 360px;
+
+
+    background-color: #0c3323b7;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-livro_propriedades>h2 {
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: white;
+}
+
+.card-livro_propriedades>P {
+    font-size: 0.8em;
+    color: white;
+}
+
+.card-livro_image {
+    width: 270px;
+    height: 150px;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-livro_buttons {
+    display: flex;
+    align-items: space-between;
+
+}
+
+button {
+    background-color: #F4C430;
+    border-radius: 5px;
+}
+
+.card-livro_buttons>.button2 {
+    margin-left: 10px;
+}
