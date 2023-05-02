@@ -1,18 +1,18 @@
 <div class=" card-livro_container">
-<button class="card-livro_Anterior" (click)="anteriorCard()"  [disabled]="startIndex === 0" ><</button>
-<div class="card-livro_propriedades" *ngFor="let livro of livrosVisiveis">
-    <img alt="Produto" src="{{image}}" class="card-livro_image">
-    <h2>{{livro.titulo }}</h2>
-    <p>{{ livro.preco }}$</p>
-    <p>{{ livro.disponivel ? 'Disponível' : 'Indisponível' }}</p>
-    <p>Classificação {{ livro.classificacao }} anos</p>
+    <button class="card-livro_Anterior" (click)="anteriorCard()" [disabled]="startIndex === 0">
+        << </button>
 
-    <div class="card-livro_buttons">
-        <button>Comprar</button>
-        <div class="button2"><button>Adicionar ao carrinho</button></div>
-    </div>
-   
-</div> 
+                <div class="card-livro_propriedades" *ngFor="let livro of livrosVisiveis">
+                    <img alt="Produto" src="{{image}}" class="card-livro_image">
+                    <h2>{{livro.titulo }}</h2>
+                    <p>{{ livro.preco }}$</p>
+                    <p>{{ livro.disponivel ? 'Disponível' : 'Indisponível' }}</p>
+                    <p>Classificação {{ livro.classificacao }} anos</p>
+                    <div class="card-livro_buttons">
+                        <button>Comprar</button>
+                        <div class="button2"><button>Adicionar ao carrinho</button></div>
+                    </div>
+                </div>
 
-<button class="card-livro_Proximo" (click)="proximoCard()" [disabled]="endIndex >= livros.length" >></button>
-</div>
+            <button class="card-livro_Proximo" (click)="proximoCard()" [disabled]="endIndex >= livros.length">></button>
+        </div>

@@ -5,4 +5,5 @@ export class Livros {
     preco: number = 0;
     titulo: string = ""
     disponivel: any;
+    categoria: string = ""
 }

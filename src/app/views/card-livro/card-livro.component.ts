@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Livros } from 'src/app/Models/livros';
 
 
-
 @Component({
   selector: 'app-card-livro',
   templateUrl: './card-livro.component.html',
@@ -36,12 +35,13 @@ export class CardLivroComponent implements OnInit {
         this.livros = response;
         this.livrosVisiveis = this.livros.slice(0,4);
         console.log(response);
-        this.livros.forEach(livro => {
-          this.livro.titulo= livro
-          this.livro.quantidadePaginas = livro
-          this.livro.classificacao = livro
-          this.livro.preco = livro
-          this.livro.disponivel = livro
+        this.livros.forEach(categoria => {
+          this.livro.titulo= categoria
+          this.livro.quantidadePaginas = categoria
+          this.livro.classificacao = categoria
+          this.livro.preco = categoria
+          this.livro.disponivel = categoria
+          this.livro.categoria = categoria
         },
           (error: any) => {
             console.log(error)
