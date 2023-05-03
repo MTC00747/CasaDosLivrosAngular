@@ -6,4 +6,5 @@ export class Livros {
     titulo: string = ""
     disponivel: any;
     categoria: string = ""
+    imagem :string = ""
 }

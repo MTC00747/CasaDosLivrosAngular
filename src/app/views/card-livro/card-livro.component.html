@@ -1,18 +1,43 @@
 <div class=" card-livro_container">
-    <button class="card-livro_Anterior" (click)="anteriorCard()" [disabled]="startIndex === 0">
-        << </button>
+
+    <section class="card-livro_informatica">
+        <button class="card-livro_Anterior" (click)="anteriorCardInfo()" [disabled]="startIndex === 0">
+            << </button>
 
                 <div class="card-livro_propriedades" *ngFor="let livro of livrosVisiveis">
-                    <img alt="Produto" src="{{image}}" class="card-livro_image">
-                    <h2>{{livro.titulo }}</h2>
-                    <p>{{ livro.preco }}$</p>
-                    <p>{{ livro.disponivel ? 'Disponível' : 'Indisponível' }}</p>
-                    <p>Classificação {{ livro.classificacao }} anos</p>
+                    <p>{{livro.categoria}}</p>
+                    <img alt="Produto" src="{{livro.imagem}}" class="card-livro_image">
+                    <h3>{{livro.titulo }}</h3>
+                    <p class="card-livro_preco">R${{ livro.preco }}</p>
                     <div class="card-livro_buttons">
                         <button>Comprar</button>
                         <div class="button2"><button>Adicionar ao carrinho</button></div>
                     </div>
                 </div>
+                <button class="card-livro_Proximo" (click)="proximoCardInformatica()"
+                    [disabled]="endIndex >= informatica.length">></button>
+    </section>
+    <!--Fim da categoria Informatica-->
 
-            <button class="card-livro_Proximo" (click)="proximoCard()" [disabled]="endIndex >= livros.length">></button>
-        </div>
+    <!--Categoria Português-->
+    <section class="card-livro_portugues">
+        <button class="card-livro_Anterior" (click)=" anteriorCardPortugues()" [disabled]="startIndex === 0">
+            << </button>
+                <div class="card-livro_propriedades" *ngFor="let livroPortugues of livrosVisiveisPortugues">
+                    <p>{{livroPortugues.categoria}}</p>
+                    <img alt="Produto" src="{{livroPortugues.imagem}}" class="card-livro_image">
+                    <h3>{{livroPortugues.titulo }}</h3>
+                    <p class="card-livro_preco">{{ livroPortugues.preco }}$</p>
+                    <div class="card-livro_buttons">
+                        <button>Comprar</button>
+                        <div class="button2"><button>Adicionar ao carrinho</button></div>
+                    </div>
+                </div>
+                <button class="card-livro_Proximo" (click)="proximoCardPortugues()"
+                    [disabled]="endIndex >= portugues.length">></button>
+            </section>
+    <!--fim da categoria Português-->
+
+    <!--Categoria Biologia-->
+    <!--fim da categoria Biologia-->
+</div>

@@ -4,7 +4,7 @@
 .Barra {
     border: 1px solid black;
     width: 40%;
-    background-color: rgba(181, 184, 0, 0.904);
+    background-color: #F7B213;
     Margin: auto;
     margin-top: 10px;
 }
@@ -53,7 +53,7 @@
     height: 300px;
     Display: flex;
     justify-content: space-around;
-    background-color: rgba(181, 184, 0, 0.904);
+    background-color:#F7B213;
     margin-top: 5px;
     align-items: center;
 }
@@ -92,7 +92,7 @@
 
 .links a:hover {
     text-decoration: none;
-    background-color: yellow;
+    background-color:yellow;;
     font-family: Roboto;
 
 }

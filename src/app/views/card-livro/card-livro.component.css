@@ -1,21 +1,24 @@
-.card-livro_container {
+.card-livro_container > section {
     display: flex;
+    flex-direction: row;
     margin-top: 15px;
     justify-content: center;
 }
 
+/*Botões referente ao slide*/
 .card-livro_Anterior {
     margin-top: 160px;
     height: 40px;
     margin-left: 10px;;
 }
-
 .card-livro_Proximo {
     margin-left: 10px;
     margin-top: 160px;
     height: 40px;
     
 }
+/*Termino dos  botões*/
+
 .card-livro_propriedades:hover {
     transform: scale(1.05);
   }
@@ -28,30 +31,30 @@
     margin-bottom: 60px;
     margin-left: 20px;
 
-    width: 270px;
-    height: 360px;
+    width: 250px;
+    height: 370px;
 
 
     background-color: #0c3323b7;
 
 
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
 }
-.card-livro_propriedades>h2 {
+.card-livro_propriedades>h3{
     margin-top: 10px;
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: white;
 }
-
 .card-livro_propriedades>P {
-    font-size: 0.8em;
+    font-size: 1em;
     color: white;
 }
 
 .card-livro_image {
-    width: 270px;
+    width: 200px;
     height: 150px;
     border-radius: 15px 15px 0 0;
 }
@@ -63,10 +66,13 @@
 }
 
 button {
-    background-color: #F4C430;
+    background-color: #F7B213;
     border-radius: 5px;
+    height: 50px;
+    font-size: 0.9em;
 }
 
 .card-livro_buttons>.button2 {
+    
     margin-left: 10px;
 }
