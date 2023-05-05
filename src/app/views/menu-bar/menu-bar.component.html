@@ -1,15 +1,22 @@
-    <!-- Topo do Html + Menu -->
-    <div class="Topo">
-        <Div class="container-gid">
-            <Img src="/assets/images/Logo.svg" class="logo" />
-            <nav class="menu mostraMenu" id="menubar">
-                <a routerLink="">Home</a>
-                <a href="#">Enventos</a>
-                <a href="#">Promoções</a>
-                <a routerLink="/login">Login</a>
-                <a href="#">Mais vendidos</a>
-            </nav>
-            <img onclick="mostrarMenu()" src="/assets/images/menuHam.svg" class="menu-Ham">
-        </Div>
-    </div>
-    <!-- FIM Topo do Html + Menu -->
+<!-- Topo do Html + Menu -->
+<div class="Topo">
+    <Div class="container-gid">
+        <Img src="/assets/images/Logo.svg" class="logo" />
+        <nav class="menu mostraMenu" id="menubar">
+            <a routerLink="">Home</a>
+            <a href="#">Enventos</a>
+            <a href="#">Promoções</a>
+        </nav>
+        <app-carrinho></app-carrinho>
+        <div class="card-menu_icon_entrar">
+            <a class="card-menu_login" routerLink="/login"><img
+                    src="https://cdn.pixabay.com/photo/2021/06/07/13/46/user-6318008_1280.png" alt=""></a>
+            <p>Entrar</p>
+        </div>
+       
+
+        <img onclick="mostrarMenu()" src="/assets/images/menuHam.svg" class="menu-Ham">
+        
+    </Div>
+</div>
+<!-- FIM Topo do Html + Menu -->

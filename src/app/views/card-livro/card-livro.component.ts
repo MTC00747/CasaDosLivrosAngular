@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { CardLivrosService } from 'src/app/services/card-livros.service';
 import { Livros } from 'src/app/Models/livros';
+
 
 
 @Component({
   selector: 'app-card-livro',
   templateUrl: './card-livro.component.html',
-  styleUrls: ['./card-livro.component.css']
+  styleUrls: ['./card-livro.component.css'],
 })
 export class CardLivroComponent implements OnInit {
   //Criando propriedades do card-livro 
@@ -20,13 +22,15 @@ export class CardLivroComponent implements OnInit {
   livrosVisiveis: any[] = []
   livrosVisiveisPortugues: any[] = []
 
+ 
+
   image: string = "https://st2.depositphotos.com/2769299/7063/i/600/depositphotos_70637161-stock-photo-books-on-wooden-desk.jpg"
 
   startIndex: number = 0;
   endIndex: number = 4;
 
 
-  constructor(private http: HttpClient, private livro: Livros) {
+  constructor(private http: HttpClient, private livro: Livros,private carrinhoService : CardLivrosService) {
 
   }
 
@@ -51,6 +55,7 @@ export class CardLivroComponent implements OnInit {
           this.livro.disponivel = livroPortugues
           this.livro.categoria = livroPortugues
           this.livro.imagem = livroPortugues
+          this.livro.id = livroPortugues
         })
         //Filtra os livros que são da categoria informatica 
         this.informatica = this.livros.filter(item => {
@@ -65,6 +70,8 @@ export class CardLivroComponent implements OnInit {
           this.livro.disponivel = livroInformatica
           this.livro.categoria = livroInformatica
           this.livro.imagem = livroInformatica
+          this.livro.id = livroInformatica
+        
         },
           (error: any) => {
             console.log(error)
@@ -95,6 +102,10 @@ export class CardLivroComponent implements OnInit {
     this.startIndex -= 1;
     this.endIndex -= 1
     this.livrosVisiveisPortugues = this.portugues.slice(this.startIndex, this.endIndex)
+  }
+
+  adicionarAoCarrinho(i: any) {
+      this.carrinhoService.intesCarrinho.push(this.livros[i])
   }
 }
 

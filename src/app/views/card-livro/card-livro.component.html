@@ -4,14 +4,14 @@
         <button class="card-livro_Anterior" (click)="anteriorCardInfo()" [disabled]="startIndex === 0">
             << </button>
 
-                <div class="card-livro_propriedades" *ngFor="let livro of livrosVisiveis">
+                <div class="card-livro_propriedades animate__animated animate__headShake " *ngFor="let livro of livrosVisiveis; let i = index">
                     <p>{{livro.categoria}}</p>
                     <img alt="Produto" src="{{livro.imagem}}" class="card-livro_image">
                     <h3>{{livro.titulo }}</h3>
                     <p class="card-livro_preco">R${{ livro.preco }}</p>
                     <div class="card-livro_buttons">
                         <button>Comprar</button>
-                        <div class="button2"><button>Adicionar ao carrinho</button></div>
+                        <div class="button2"><button (click)="adicionarAoCarrinho(i)">Adicionar ao carrinho</button></div>
                     </div>
                 </div>
                 <button class="card-livro_Proximo" (click)="proximoCardInformatica()"
@@ -21,16 +21,16 @@
 
     <!--Categoria Português-->
     <section class="card-livro_portugues">
-        <button class="card-livro_Anterior" (click)=" anteriorCardPortugues()" [disabled]="startIndex === 0">
+        <button class="card-livro_Anterior"  (click)=" anteriorCardPortugues()" [disabled]="startIndex === 0">
             << </button>
-                <div class="card-livro_propriedades" *ngFor="let livroPortugues of livrosVisiveisPortugues">
+                <div class="card-livro_propriedades animate__animated animate__headShake " *ngFor="let livroPortugues of livrosVisiveisPortugues; let i = index">
                     <p>{{livroPortugues.categoria}}</p>
                     <img alt="Produto" src="{{livroPortugues.imagem}}" class="card-livro_image">
                     <h3>{{livroPortugues.titulo }}</h3>
                     <p class="card-livro_preco">{{ livroPortugues.preco }}$</p>
                     <div class="card-livro_buttons">
                         <button>Comprar</button>
-                        <div class="button2"><button>Adicionar ao carrinho</button></div>
+                        <div class="button2"><button (click)="adicionarAoCarrinho(i)">Adicionar ao carrinho</button></div>
                     </div>
                 </div>
                 <button class="card-livro_Proximo" (click)="proximoCardPortugues()"

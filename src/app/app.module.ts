@@ -14,6 +14,10 @@ import { LoginComponent } from './views/login/login.component';
 import { MenuBarComponent } from './views/menu-bar/menu-bar.component';
 import { BannerCarrouselComponent } from './views/banner-carrousel/banner-carrousel.component';
 import { CardLivroComponent } from './views/card-livro/card-livro.component';
+import { CarrinhoComponent } from './views/carrinho/carrinho.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardLivrosService } from './services/card-livros.service';
+
 
 
 
@@ -26,16 +30,16 @@ import { CardLivroComponent } from './views/card-livro/card-livro.component';
     MenuBarComponent,
     BannerCarrouselComponent,
     CardLivroComponent,
-
-    
+    CarrinhoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    [BrowserAnimationsModule], 
   ],
-  providers: [Livros],
+  providers: [Livros,CarrinhoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

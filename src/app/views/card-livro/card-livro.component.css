@@ -50,7 +50,7 @@
 }
 .card-livro_propriedades>P {
     font-size: 1em;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .card-livro_image {
@@ -64,7 +64,6 @@
     align-items: space-between;
 
 }
-
 button {
     background-color: #F7B213;
     border-radius: 5px;

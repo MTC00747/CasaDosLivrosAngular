@@ -4,16 +4,19 @@
     align-items: center;
     justify-content: space-around;
     Border: solid black 1px;
-    background-color: rgb(11, 15, 2)
+    background-color:#F7B213;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    margin-top: -10px;;
+    
 }
-
 /*Container Para centralização*/
 .container-gid {
     display: flex;
     justify-content: space-between;
     align-items: Center;
     max-width: 1200px;
-
 }
 
 .logo {
@@ -31,7 +34,7 @@
 
 .menu a {
     text-decoration: None;
-    Color: white;
+    Color:  black;
     Margin: 10px;
     font-family: Roboto;
     Font-size: 18px;
@@ -43,6 +46,24 @@
 }
 .menu-Ham {
     display: None;
+}
+
+.card-menu_login > img{
+    width: 30px;
+    margin-left: 40px;
+}
+
+.card-menu_icon_entrar {
+    margin-top: 10px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-menu_icon_entrar > p{
+    margin-left: 40px;
+    margin-top: 5px;
+
 }
 /*Fim da estilazação do TOPO + Menu*/
 

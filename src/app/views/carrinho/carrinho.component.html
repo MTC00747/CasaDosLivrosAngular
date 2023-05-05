@@ -1,0 +1,18 @@
+<div class="card-menu_icon_carrinho">
+    <button (click)=" exibirCarrinho()"><img class="card-menu_carrinho"
+            src="https://cdn.pixabay.com/photo/2014/06/19/00/59/shopping-cart-371980_1280.png" alt=""></button>
+    <p>Meu carrinho</p>
+</div>
+<div class ="carrinho-card_container animate__animated animate__fadeInRight " [ngClass]="{'show': Carrinho }" *ngIf="Carrinho" >
+    <div class ="carrinho_menu  ">
+        <button (click)="fecharCarrinho()">X</button>
+        <h2>Meus produtos</h2>
+    </div>
+    <div class="carrinho-card_itens" *ngFor="let livro of carrinhoProdutos">
+        <img src="{{livro.imagem}}">
+     <h2>{{livro.titulo}}</h2>
+     <h2>{{livro.preco}}</h2>
+     <hr>
+
+    </div>
+</div>
