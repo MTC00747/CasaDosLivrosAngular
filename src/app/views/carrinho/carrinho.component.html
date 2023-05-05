@@ -3,16 +3,33 @@
             src="https://cdn.pixabay.com/photo/2014/06/19/00/59/shopping-cart-371980_1280.png" alt=""></button>
     <p>Meu carrinho</p>
 </div>
-<div class ="carrinho-card_container animate__animated animate__fadeInRight " [ngClass]="{'show': Carrinho }" *ngIf="Carrinho" >
-    <div class ="carrinho_menu  ">
+<div class="carrinho-card_container animate__animated animate__fadeInRight " [ngClass]="{'show': Carrinho }"
+    *ngIf="Carrinho">
+    <div class="carrinho_menu  ">
         <button (click)="fecharCarrinho()">X</button>
         <h2>Meus produtos</h2>
     </div>
-    <div class="carrinho-card_itens" *ngFor="let livro of carrinhoProdutos">
-        <img src="{{livro.imagem}}">
-     <h2>{{livro.titulo}}</h2>
-     <h2>{{livro.preco}}</h2>
-     <hr>
+    <p *ngIf="carrinhoProdutos.length === 0 ">carrinho</p>
 
+    <div class="carrinho-card_itens" *ngFor="let livro of carrinhoProdutos; let i = index">
+
+        <img id="Image1" src="{{livro.imagem}}">
+
+        <div class="card-carrinho_tituloEquantidade">
+            <h2>{{livro.titulo}}</h2>
+            <input type="number" value="0">
+        </div>
+
+
+
+        <div class="carrinho-card_tituloEpreco">
+
+
+            <button (click)="removerItem(i)" class="carrinh-button_remover"><img
+                    src="https://cdn.pixabay.com/photo/2017/02/23/08/46/garbage-2091534_640.png"></button>
+
+            <p>{{livro.preco}}$</p>
+        </div>
     </div>
+
 </div>

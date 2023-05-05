@@ -31,11 +31,11 @@
     margin-bottom: 60px;
     margin-left: 20px;
 
-    width: 250px;
-    height: 370px;
+    width: 200px;
+    height: 300px;
 
 
-    background-color: #0c3323b7;
+    background-color: #29637c;
 
 
     display: flex;
@@ -54,18 +54,19 @@
 }
 
 .card-livro_image {
-    width: 200px;
+    width: 140px;
     height: 150px;
     border-radius: 15px 15px 0 0;
 }
 
 .card-livro_buttons {
+    margin-bottom: 5px;
     display: flex;
     align-items: space-between;
 
 }
 button {
-    background-color: #F7B213;
+    background-color: #D0A03C;
     border-radius: 5px;
     height: 50px;
     font-size: 0.9em;
@@ -74,4 +75,8 @@ button {
 .card-livro_buttons>.button2 {
     
     margin-left: 10px;
+}
+.card-livro_carrinho{
+    
+   width: 30px;
 }

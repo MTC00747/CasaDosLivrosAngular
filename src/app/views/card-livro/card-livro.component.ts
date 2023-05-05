@@ -12,32 +12,29 @@ import { Livros } from 'src/app/Models/livros';
 })
 export class CardLivroComponent implements OnInit {
   //Criando propriedades do card-livro 
-  livros: any[] = []; //Criando array que vai receber os livros do back-end
+  livros: Livros[] = []; //Criando array que vai receber os livros do back-end
 
   //Setando arrays para filtro de categorias
   informatica: any[] = [];
   portugues: any[] = []
 
   //Setando Array para slide
-  livrosVisiveis: any[] = []
-  livrosVisiveisPortugues: any[] = []
+  livrosVisiveis: Livros[] = []
+  livrosVisiveisPortugues: Livros[] = []
 
- 
-
-  image: string = "https://st2.depositphotos.com/2769299/7063/i/600/depositphotos_70637161-stock-photo-books-on-wooden-desk.jpg"
 
   startIndex: number = 0;
-  endIndex: number = 4;
+  endIndex: number = 5;
 
 
-  constructor(private http: HttpClient, private livro: Livros,private carrinhoService : CardLivrosService) {
+  constructor(private http: HttpClient, private livro: Livros, private carrinhoService: CardLivrosService) {
 
   }
 
   ngOnInit(): void {
-    this.getLivros();
+    this.carregarLivros();
   }
-  getLivros() {
+  carregarLivros() {
     return this.http.get<any[]>("http://localhost:5128/api/Livros").subscribe(
       (response: any[]) => {
         this.livros = response;
@@ -45,8 +42,7 @@ export class CardLivroComponent implements OnInit {
         this.portugues = this.livros.filter(item => {
           return item.categoria === "Português"
         })
-        console.log(this.portugues)
-        this.livrosVisiveisPortugues = this.portugues.slice(0, 4);
+        this.livrosVisiveisPortugues = this.portugues.slice(0, 5);
         this.portugues.forEach(livroPortugues => {
           this.livro.titulo = livroPortugues
           this.livro.quantidadePaginas = livroPortugues
@@ -61,7 +57,7 @@ export class CardLivroComponent implements OnInit {
         this.informatica = this.livros.filter(item => {
           return item.categoria === "Informatica"
         })
-        this.livrosVisiveis = this.informatica.slice(0, 4);
+        this.livrosVisiveis = this.informatica.slice(0, 5);
         this.informatica.forEach(livroInformatica => {
           this.livro.titulo = livroInformatica
           this.livro.quantidadePaginas = livroInformatica
@@ -71,7 +67,7 @@ export class CardLivroComponent implements OnInit {
           this.livro.categoria = livroInformatica
           this.livro.imagem = livroInformatica
           this.livro.id = livroInformatica
-        
+
         },
           (error: any) => {
             console.log(error)
@@ -104,8 +100,25 @@ export class CardLivroComponent implements OnInit {
     this.livrosVisiveisPortugues = this.portugues.slice(this.startIndex, this.endIndex)
   }
 
-  adicionarAoCarrinho(i: any) {
-      this.carrinhoService.intesCarrinho.push(this.livros[i])
+  adicionarAoCarrinhoLivrosInformatica(i:number) {
+
+    const itemExistente: Livros = this.carrinhoService.itemsCarrinho.find(item => item.id === this.livrosVisiveis[i].id)
+    
+    if(itemExistente) {
+      alert("Este item já foi adicionado ao carrinho, defina a quantidade.")
+    }else{
+    this.carrinhoService.itemsCarrinho.push(this.livrosVisiveis[i])
+    }
+    
+  }
+  adicionarAoCarrinhoLivrosPortugues(i:number) {
+    const itemExistente: Livros = this.carrinhoService.itemsCarrinho.find(item => item.id === this.livrosVisiveisPortugues[i].id)
+    
+    if(itemExistente) {
+      alert("Este item já foi adicionado ao carrinho, defina a quantidade.")
+    }else{
+      this.carrinhoService.itemsCarrinho.push(this.livrosVisiveisPortugues[i])
+    }
   }
 }
 

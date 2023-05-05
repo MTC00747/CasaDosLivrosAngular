@@ -7,39 +7,42 @@ import { Livros } from 'src/app/Models/livros';
   selector: 'app-carrinho',
   templateUrl: './carrinho.component.html',
   styleUrls: ['./carrinho.component.css'],
-  
-  
+
+
 })
- 
+
 export class CarrinhoComponent implements OnInit {
   Carrinho = false;
-  carrinhoProdutos : any[]= [];
-
-
-  constructor(private cardLivros : CardLivrosService, private livro : Livros) { 
- this.carrinhoProdutos =  this.cardLivros.intesCarrinho
-  }
+  carrinhoProdutos: any[] = [];
   
-  ngOnInit(): void {
+
+  constructor(private cardLivros: CardLivrosService, private livro: Livros) {
+    this.carrinhoProdutos = this.cardLivros.itemsCarrinho
   }
 
+  ngOnInit(): void {
 
+    
+  }
   exibirCarrinho() {
+   
     if (!this.Carrinho) {
       this.Carrinho = true;
     } else {
       this.Carrinho = false
     }
-    this.carrinhoProdutos.forEach(livro =>{
+    this.carrinhoProdutos.forEach(livro => {
       this.livro.imagem = livro
       this.livro.titulo = livro
       this.livro.preco = livro
     })
   }
-  removerIten(){
-    
+  
+
+  removerItem(index: any) {
+    this.carrinhoProdutos.splice(index, 1)
   }
-  fecharCarrinho(){
+  fecharCarrinho() {
     this.Carrinho = false
   }
 

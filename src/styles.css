@@ -9,6 +9,10 @@
     font-family: Russo;
     src: url(assets/Fonts/Russo/RussoOne-Regular.ttf)
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Montserrat:wght@500&display=swap');
+
+
 
 body {
     padding: 0;

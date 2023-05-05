@@ -3,16 +3,20 @@
 
 .Barra {
     border: 1px solid black;
-    width: 40%;
-    background-color: #F7B213;
-    Margin: auto;
+    margin-left: 100px;
+    width: 20%;
+    background-color: #D0A03C;
     margin-top: 10px;
 }
 
 .Barra h1 {
-    font-family: Roboto;
-    Font-size: 2rem;
+    font-family: 'Arvo', serif;
+    Font-size: 1.5rem;
     text-align: Center;
+    text-align: justify;
+    font-weight: bolder;
+    display: flex;
+    justify-content:center ;
 
 }
 /*Fim da categorais mais vendidos*/
@@ -110,6 +114,7 @@
     text-decoration: none;
     background-color: yellow;
     font-family: Roboto;
+    
 
 }
 /*FIM DO CSS*/

@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-around;
     Border: solid black 1px;
-    background-color:#F7B213;
+    background-color:#D0A03C;
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -36,11 +36,12 @@
     text-decoration: None;
     Color:  black;
     Margin: 10px;
-    font-family: Roboto;
-    Font-size: 18px;
+ font-family: 'Montserrat', sans-serif;;
+    font-weight: bolder;
+    font-size: 1.2em;
 }
 .menu a:hover{
-    background-color: #F7B213;
+    background-color: #D0A03C;
     
     
 }
@@ -63,7 +64,9 @@
 .card-menu_icon_entrar > p{
     margin-left: 40px;
     margin-top: 5px;
-
+   font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 1.2em;
 }
 /*Fim da estilazação do TOPO + Menu*/
 
@@ -107,6 +110,7 @@
         font-size: 1.5rem;
         color: black;
         padding-top: 10px;
+
         padding-left: 15px;
         margin-left: 45px;
         border-left: dotted 3px black;

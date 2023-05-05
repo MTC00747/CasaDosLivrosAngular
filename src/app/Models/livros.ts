@@ -7,5 +7,5 @@ export class Livros {
     disponivel: any;
     categoria: string = ""
     imagem :string = ""
-    id : any
+    id : number = 0
 }

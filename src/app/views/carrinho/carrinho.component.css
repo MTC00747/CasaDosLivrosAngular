@@ -1,32 +1,35 @@
-.card-menu_carrinho{
+.card-menu_carrinho {
     margin-left: 140px;
     width: 30px;
 }
+
 .card-menu_icon_carrinho {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-top: 10px;;
+    margin-top: 10px;
+    ;
 }
-.card-menu_icon_carrinho > p{
+
+.card-menu_icon_carrinho>p {
     margin-left: 140px;
     margin-top: 8px;
-
+    font-family: 'Montserrat', sans-serif;
+    ;
+    font-weight: bolder;
+    font-size: 1.2em;
 }
+
+.carrinho-card_vazio {
+    color: black;
+}
+
 button {
     background-color: transparent;
     border: none;
 }
-.carrinho-card_container{
-    position: fixed;
-    width: 600px;
-    z-index: 12000;
-    height: 200px;
-    background-color: green;
 
-    right: 40px;
-}
 .carrinho-card_container {
     position: fixed;
     top: 0;
@@ -35,23 +38,76 @@ button {
     z-index: 12000;
     height: 100vh;
     background-color: rgb(218, 223, 218);
-    box-shadow:20px;
+    overflow: auto;
+    box-shadow: 20px;
     box-shadow: 10px 5px 5px 20px rgba(0, 0, 0, 0.267);
 }
+
 .carrinho-card_container.show {
-  right: 0;
+    right: 0;
 }
+
 .carrinho_menu {
-    height:87px; 
+    height: 87px;
     background-color: #F7B213;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-.carrinho_menu h2{
-   font-size: 1em;
+
+.carrinho_menu h2 {
+    font-size: 1em;
 }
-.carrinho-card_itens img{
+
+.carrinho-card_itens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 20px 10px 5px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+
+    
+    width: 80%;
+
+}
+
+#Image1 {
+    width: 120px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.267);
+    border-radius: 10px;
+}
+
+.card-carrinho_tituloEquantidade {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-carrinho_tituloEquantidade>input {
     width: 40px;
+    background: transparent;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.267);
+    border-radius: 10px;
+}
+
+.card-carrinho_tituloEquantidade>h2 {
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(8, 8, 8)
+}
+
+.carrinho-card_tituloEpreco>p {
+    font-size: 1.4em;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    color: rgb(10, 10, 10)
+}
+
+.carrinh-button_remover>img {
+    width: 20px;
+    margin-top: 20px;
+
 }

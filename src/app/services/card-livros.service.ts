@@ -5,6 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class CardLivrosService {
    //Array para carrinho 
-   intesCarrinho :any[] = []
+   itemsCarrinho :any[] = []
   constructor() { }
 }
