@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CardLivrosService } from 'src/app/services/card-livros.service';
 import { Livros } from 'src/app/Models/livros';
 
@@ -15,8 +15,8 @@ export class CardLivroComponent implements OnInit {
   livros: Livros[] = []; //Criando array que vai receber os livros do back-end
 
   //Setando arrays para filtro de categorias
-  informatica: any[] = [];
-  portugues: any[] = []
+  informatica: Livros[] = [];
+  portugues: Livros[] = []
 
   //Setando Array para slide
   livrosVisiveis: Livros[] = []
@@ -25,6 +25,7 @@ export class CardLivroComponent implements OnInit {
 
   startIndex: number = 0;
   endIndex: number = 5;
+  preçoProduto: number = 0
 
 
   constructor(private http: HttpClient, private livro: Livros, private carrinhoService: CardLivrosService) {
@@ -44,14 +45,12 @@ export class CardLivroComponent implements OnInit {
         })
         this.livrosVisiveisPortugues = this.portugues.slice(0, 5);
         this.portugues.forEach(livroPortugues => {
-          this.livro.titulo = livroPortugues
-          this.livro.quantidadePaginas = livroPortugues
-          this.livro.classificacao = livroPortugues
-          this.livro.preco = livroPortugues
-          this.livro.disponivel = livroPortugues
-          this.livro.categoria = livroPortugues
-          this.livro.imagem = livroPortugues
-          this.livro.id = livroPortugues
+          this.livro.titulo = livroPortugues.titulo
+          this.livro.preco = livroPortugues.preco
+          this.livro.categoria = livroPortugues.categoria
+          this.livro.imagem = livroPortugues.imagem
+          this.livro.id = livroPortugues.id
+          this.preçoProduto = livroPortugues.preco
         })
         //Filtra os livros que são da categoria informatica 
         this.informatica = this.livros.filter(item => {
@@ -59,14 +58,12 @@ export class CardLivroComponent implements OnInit {
         })
         this.livrosVisiveis = this.informatica.slice(0, 5);
         this.informatica.forEach(livroInformatica => {
-          this.livro.titulo = livroInformatica
-          this.livro.quantidadePaginas = livroInformatica
-          this.livro.classificacao = livroInformatica
-          this.livro.preco = livroInformatica
-          this.livro.disponivel = livroInformatica
-          this.livro.categoria = livroInformatica
-          this.livro.imagem = livroInformatica
-          this.livro.id = livroInformatica
+          this.livro.titulo = livroInformatica.titulo
+          this.livro.preco = livroInformatica.preco
+          this.livro.categoria = livroInformatica.categoria
+          this.livro.imagem = livroInformatica.imagem
+          this.livro.id = livroInformatica.id
+          this.preçoProduto = livroInformatica.preco
 
         },
           (error: any) => {
@@ -76,8 +73,6 @@ export class CardLivroComponent implements OnInit {
       }
     )
   }
-
-  //Função para o slide
   proximoCardInformatica() {
     this.startIndex += 1; // startIndex inicia com 0, ou seja  0 livros, após a função ser chamada, ele adiciona um ao final e um ao começo 
     this.endIndex += 1;// endIndex  inicia com 4, ou seja  4 livros, após a função ser chamada, ele adiciona um ao final e um ao começo 
@@ -96,29 +91,22 @@ export class CardLivroComponent implements OnInit {
   }
   anteriorCardPortugues() {
     this.startIndex -= 1;
-    this.endIndex -= 1
-    this.livrosVisiveisPortugues = this.portugues.slice(this.startIndex, this.endIndex)
+    this.endIndex -= 1;
+    this.livrosVisiveisPortugues = this.portugues.slice(this.startIndex, this.endIndex);
   }
 
-  adicionarAoCarrinhoLivrosInformatica(i:number) {
+  adicionarAoCarrinho(tipoLivro: string, i: number ) {
+    const livrosVisiveis = tipoLivro === 'informatica' ? this.livrosVisiveis : this.livrosVisiveisPortugues;
+    const itemExistente: Livros = this.carrinhoService.itemsCarrinho.find(item => item.id === livrosVisiveis[i].id);
 
-    const itemExistente: Livros = this.carrinhoService.itemsCarrinho.find(item => item.id === this.livrosVisiveis[i].id)
-    
-    if(itemExistente) {
+    if (itemExistente) {
       alert("Este item já foi adicionado ao carrinho, defina a quantidade.")
-    }else{
-    this.carrinhoService.itemsCarrinho.push(this.livrosVisiveis[i])
+    } else {
+      this.carrinhoService.itemsCarrinho.push(livrosVisiveis[i]);
     }
-    
+    this.carrinhoService.calcularValorTotal()
   }
-  adicionarAoCarrinhoLivrosPortugues(i:number) {
-    const itemExistente: Livros = this.carrinhoService.itemsCarrinho.find(item => item.id === this.livrosVisiveisPortugues[i].id)
-    
-    if(itemExistente) {
-      alert("Este item já foi adicionado ao carrinho, defina a quantidade.")
-    }else{
-      this.carrinhoService.itemsCarrinho.push(this.livrosVisiveisPortugues[i])
-    }
-  }
+
+
 }
 

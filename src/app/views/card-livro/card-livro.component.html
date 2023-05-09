@@ -11,7 +11,7 @@
                     <p class="card-livro_preco">R${{ livro.preco }}</p>
                     <div class="card-livro_buttons">
                         <button>Comprar</button>
-                        <div class="button2"><button (click)="adicionarAoCarrinhoLivrosInformatica(i)"><img class ="card-livro_carrinho"src="https://cdn.pixabay.com/photo/2014/06/19/00/59/shopping-cart-371980_1280.png"></button></div>
+                        <div class="button2"><button (click)="adicionarAoCarrinho('informatica', i)"><img class ="card-livro_carrinho"src="https://cdn.pixabay.com/photo/2014/06/19/00/59/shopping-cart-371980_1280.png"></button></div>
                     </div>
                 </div>
                 <button class="card-livro_Proximo" (click)="proximoCardInformatica()"
@@ -30,7 +30,7 @@
                     <p class="card-livro_preco">{{ livroPortugues.preco }}$</p>
                     <div class="card-livro_buttons">
                         <button>Comprar</button>
-                        <div class="button2"><button (click)="adicionarAoCarrinhoLivrosPortugues(i)"><img class ="card-livro_carrinho"src="https://cdn.pixabay.com/photo/2014/06/19/00/59/shopping-cart-371980_1280.png"></button></div>
+                        <div class="button2"><button (click)="adicionarAoCarrinho('portugues', i)"><img class ="card-livro_carrinho"src="https://cdn.pixabay.com/photo/2014/06/19/00/59/shopping-cart-371980_1280.png"></button></div>
                     </div>
                 </div>
                 <button class="card-livro_Proximo" (click)="proximoCardPortugues()"

@@ -11,12 +11,18 @@
     margin-top: 10px;
     ;
 }
+.Card-carrinho_paragrafo{ 
+    text-align: center;
+    margin-top: 50%;
+    font-size: 2.0em;
+    opacity: 0.8;
+    color :gray;
+}
 
 .card-menu_icon_carrinho>p {
     margin-left: 140px;
     margin-top: 8px;
     font-family: 'Montserrat', sans-serif;
-    ;
     font-weight: bolder;
     font-size: 1.2em;
 }
@@ -29,7 +35,9 @@ button {
     background-color: transparent;
     border: none;
 }
-
+button > img{
+   width: 30px;
+}
 .carrinho-card_container {
     position: fixed;
     top: 0;
@@ -39,7 +47,6 @@ button {
     height: 100vh;
     background-color: rgb(218, 223, 218);
     overflow: auto;
-    box-shadow: 20px;
     box-shadow: 10px 5px 5px 20px rgba(0, 0, 0, 0.267);
 }
 
@@ -49,7 +56,7 @@ button {
 
 .carrinho_menu {
     height: 87px;
-    background-color: #F7B213;
+    background-color: #D0A03C;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -57,7 +64,10 @@ button {
 }
 
 .carrinho_menu h2 {
-    font-size: 1em;
+    font-size: 1.4em;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px;
+    margin: 10px;
 }
 
 .carrinho-card_itens {
@@ -77,6 +87,7 @@ button {
 
 #Image1 {
     width: 120px;
+    margin-right: 5px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.267);
     border-radius: 10px;
 }
@@ -84,6 +95,7 @@ button {
 .card-carrinho_tituloEquantidade {
     display: flex;
     flex-direction: column;
+    margin-left: 15px;
 }
 
 .card-carrinho_tituloEquantidade>input {
@@ -91,6 +103,7 @@ button {
     background: transparent;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.267);
     border-radius: 10px;
+    
 }
 
 .card-carrinho_tituloEquantidade>h2 {
@@ -109,5 +122,22 @@ button {
 .carrinh-button_remover>img {
     width: 20px;
     margin-top: 20px;
-
+}
+.Card-carrinho_Quantidade_valor_total{
+    display : flex;
+    justify-content: space-between;
+}
+.carrinho-card_FinalizarCompra{
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: #D0A03C;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.267);
+    border-radius: 10px;
+    height: 40px;
+}
+.carrinho-card_valorFinal{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 1.2em;
+    margin-left: 10px;
 }

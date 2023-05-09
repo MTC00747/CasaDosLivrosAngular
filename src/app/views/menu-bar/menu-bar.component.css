@@ -18,9 +18,10 @@
     align-items: Center;
     max-width: 1200px;
 }
-
 .logo {
-    width: 250px
+    width: 150px;
+    margin-right: 120px;
+   
 }
 
 .mostraMenu {
