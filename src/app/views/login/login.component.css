@@ -1,12 +1,23 @@
 /*Página de Login*/
-body{
+.login_container{
+    background-color: #D0A03C;
+    width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.Login-Senha {
+.login_card {
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px black;
+    background-color: #29637c;;
+    border: 1px solid black;
+    width: 600px;
     Display: flex;
     justify-content: Center;
     align-items: center;
-    margin-top: 170px;
+    margin-top: 150px;
+    
 }
 
 .Lbaner {
@@ -23,6 +34,7 @@ body{
 }
 
 .Box-E {
+    
     width: 300px;
     margin-top: 20px;
     border-radius: 10px;
@@ -32,7 +44,11 @@ body{
 }
 
 .Email {
+    
     margin-top: 20px;
-    COlor:white;
+    Color:white;
     font-family: Roboto;
+}
+.btn{
+   color:  #D0A03C;
 }

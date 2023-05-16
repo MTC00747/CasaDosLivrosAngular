@@ -37,9 +37,9 @@ import { CardLivrosService } from './services/card-livros.service';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    [BrowserAnimationsModule], 
+    [BrowserAnimationsModule],
   ],
-  providers: [Livros,CarrinhoComponent],
+  providers: [Livros,CarrinhoComponent,CardLivrosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

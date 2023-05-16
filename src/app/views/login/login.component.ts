@@ -1,4 +1,6 @@
+import { Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router';
 import { User } from 'src/app/Models/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -9,13 +11,20 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router :Router) { }
 
   ngOnInit(): void {
   }
   //Classes e métodos
   userModel = new User()
   Mensagem = "";
+
+  //Função para armazenar token JWT 
+
+  setToken(token : string):void{
+    localStorage.setItem('token',token)
+  }
+
   receberDados() {
     // console.log(this.userModel);
     const Blaclist = ["SELECT", "OR", '"="', "--", ";", "1 = 1", "1=1", "DROP", "\"\"=\"\"", "'='"];
@@ -33,14 +42,18 @@ export class LoginComponent implements OnInit {
       //Disparando a funcionaldiade logar usuario 
       this.userService.logarUsuario(this.userModel).subscribe({
         next: (response: any) => {
+
           console.log("Deu certo!")
           console.log(response)
+          localStorage.setItem('token', response.body.token)
+          this.setToken(response.body.token)
+          this.router.navigate(['/home'])
           this.Mensagem = "Logado com sucesso";
         },
         error: (err: { error: string; }) => {
           console.log("Deu Erro!")
           console.log(err)
-          this.Mensagem = err.error;
+          this.Mensagem = "Email ou senhoa estão incorretos.";
         },
 
 

@@ -34,7 +34,7 @@ export class CarrinhoComponent implements OnInit {
   }
   removerItem(index: any) {
     this.carrinhoProdutos.splice(index, 1)
-    this.carrinhoService.calcularValorTotal()
+    this.calcularValorTotal()
   }
   fecharCarrinho() {
     this.Carrinho = false
