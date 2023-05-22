@@ -1,0 +1,69 @@
+.adicionar-livro_container{
+    width: 100%;
+    height: 650px;
+    background-color: #D0A03C;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.adicionar-livro_form{
+    box-shadow: 5px 5px 5px 5px  black;
+    border-radius: 10px ;
+    width: 50%;
+    height: 400px;
+    background-color: #29637c;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form{
+    width: 100%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.form >h3 { 
+    color: white;
+    font-size: 1.5em;
+}
+.form > input {
+    justify-content: flex-end;
+    border-radius: 10px;
+}
+#qtdPaginas{
+    width: 70px;
+}
+#preco{
+    width: 70px;
+}
+#titulo{
+    width: 300px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formulario > button{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+    color:black ;
+    font-size: 1.3em;
+    border: 1px solid white;
+    background-color: #D0A03C;
+    
+}
+.formulario > button:hover{
+    position: relative;
+    top:4px;
+    background-color: transparent;
+}

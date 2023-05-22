@@ -5,5 +5,9 @@ export class Livros {
     categoria: string = ""
     imagem :string = ""
     id : number = 0
+    quantidadePaginas : number = 0
+    disponivel : boolean = false
+
+    //Variavel utilizada para fazer o calculo doc carrinho
     quantidadeLivros : number = 0
 }

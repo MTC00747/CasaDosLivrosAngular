@@ -17,6 +17,11 @@ import { CardLivroComponent } from './views/card-livro/card-livro.component';
 import { CarrinhoComponent } from './views/carrinho/carrinho.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardLivrosService } from './services/card-livros.service';
+import { PainelAdmComponent } from './Views/painel-adm/painel-adm.component';
+import { AdicionarLivroComponent } from './pages/adicionar-livro/adicionar-livro.component';
+import { CadastradoSucessoComponent } from './pages/cadastrado-sucesso/cadastrado-sucesso.component';
+import { ListarLivrosComponent } from './pages/listar-livros/listar-livros.component';
+import { RemovidoSucessoComponent } from './pages/removido-sucesso/removido-sucesso.component';
 
 
 
@@ -31,6 +36,11 @@ import { CardLivrosService } from './services/card-livros.service';
     BannerCarrouselComponent,
     CardLivroComponent,
     CarrinhoComponent,
+    PainelAdmComponent,
+    AdicionarLivroComponent,
+    CadastradoSucessoComponent,
+    ListarLivrosComponent,
+    RemovidoSucessoComponent,
   ],
   imports: [
     BrowserModule,

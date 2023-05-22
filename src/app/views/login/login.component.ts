@@ -11,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService: UserService, private router :Router) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,8 +21,8 @@ export class LoginComponent implements OnInit {
 
   //Função para armazenar token JWT 
 
-  setToken(token : string):void{
-    localStorage.setItem('token',token)
+  setToken(token: string): void {
+    localStorage.setItem('token', token)
   }
 
   receberDados() {
@@ -47,7 +47,12 @@ export class LoginComponent implements OnInit {
           console.log(response)
           localStorage.setItem('token', response.body.token)
           this.setToken(response.body.token)
-          this.router.navigate(['/home'])
+          const tipo: string = response.body.tipo
+          if (tipo === "1") {
+            this.router.navigate(['/painel'])
+          } else {
+            this.router.navigate(['/'])
+          }
           this.Mensagem = "Logado com sucesso";
         },
         error: (err: { error: string; }) => {
@@ -55,8 +60,6 @@ export class LoginComponent implements OnInit {
           console.log(err)
           this.Mensagem = "Email ou senhoa estão incorretos.";
         },
-
-
       })
     }
 
