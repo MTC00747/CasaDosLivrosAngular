@@ -8,6 +8,7 @@ import { AdicionarLivroComponent } from './pages/adicionar-livro/adicionar-livro
 import { CadastradoSucessoComponent } from './pages/cadastrado-sucesso/cadastrado-sucesso.component';
 import { ListarLivrosComponent } from './pages/listar-livros/listar-livros.component';
 import { RemovidoSucessoComponent } from './pages/removido-sucesso/removido-sucesso.component';
+import { AtualizarLivroComponent } from './pages/atualizar-livro/atualizar-livro.component';
 
 
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:"adicionar-livro", component: AdicionarLivroComponent, canActivate : [AuthGuardService] },
   {path:'sucesso', component: CadastradoSucessoComponent, canActivate : [AuthGuardService]},
   {path:'removido-sucesso', component: RemovidoSucessoComponent, canActivate : [AuthGuardService]},
-  {path:'listar-livros', component: ListarLivrosComponent, canActivate : [AuthGuardService]}
+  {path:'listar-livros', component: ListarLivrosComponent, canActivate : [AuthGuardService]},
+  {path:'atualizar-livro', component: AtualizarLivroComponent, canActivate : [AuthGuardService]}
 ];
 
 @NgModule({

@@ -13,13 +13,27 @@
                 <p>{{livro.quantidadePaginas}}</p>
                 <h1>Categoria</h1>
                 <p>{{livro.categoria}}</p>
-                <button (click)="removerLivro(livro.id)"> 
-                    <img class="image1" 
+                <button (click)="removerLivro(livro.id)">
+                    <img class="image1"
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAYFBMVEX///8AAACBgYE5OTlvb29YWFhPT0+hoaGPj4/w8PDq6uolJSVHR0d1dXX7+/uoqKjGxsa9vb1qamqYmJhfX1/W1tbPz8+2traIiIgzMzNCQkIdHR0PDw/j4+NkZGR7e3uX9TkGAAACoElEQVRoge2b2XKrMAyGcUkIULYmEEjD8v5v2ZwgXEO9EjkzZ0b/pe3RhxnZloUIAidV040pdJsqN1tOSr5V3FnfiS9yeteTGbunntBHE5mxox/yl5nM2JcX9NkGffZBTkIbdOjD09JPbv8Qb3TgXZ8+HI2jQ4n1NHwHuh9kvUP/BvQo7x7fgL7Iuy+ERlYC6JO8+wTo/eu6aOL6KFUEPnyTd8Nh2kfy7jpuCj25iWy2rH2KGh258gf+J00skfolM6b2QYsD+TUpj/PEN5kxlf+X/tGlAh3zEX0WISrrueHYhD4PhjXopmI426I9xHZHS/QVH321RKO+7VmFJdrD4ZNaolX9L8hkmns4ehzPbw9GNBsvJ0RdRuO6Pun2IRwp4oyg8Y9WHtnGS+yrupu9wZc0/jv5JU9qchB0PsmdjvxwNW8Tn7RR4axlv50SBC0zsTwXYPSH3Wi9PsCY5XBCE5rQhCY0obHQVRdv72JV122zI9d404SAfqad12HG8yhexzzPIOeAi4aEgzijdm5qhSZIQImpg9fRkE4T5wjXdfGLA4QkESoaMu3iu4TbupgHgI8BIaEJTWhCE5rQhCY0oQlNaEITmtCEJjShCU1oQhP6/0dnf9H13FT/RWeoaCjLFfPukJ0X8+6QnRdLexE+QDxz8etC/3o7aUjPi5l4DHRR1nW7Hla0j6ZNDcKjqVw17UMratDdNLqhofL4hoF2tJXDk0qL/t00gKnccvxSyorw+8hSxakqXd1qeVTWmsfq1TLXF5ghsTk5M48F/RZ/5fvraIsh52YcihWF2vgs3/5VY6c8+7URmYlcA0OV01Jpzfbs5egxiLXitgsLf947VkmTmc2alVnU1skmbvXfmk7h/o2hKfOwNxNk6sO81M/4BxoJMktuHJUXAAAAAElFTkSuQmCC">
                 </button>
+                <button (click)="listarLivroPorId(livro.id,livro)">Atualizar</button>
             </div>
-
         </Div>
+    </div>
+
+    <div class="livros" *ngFor="let livroNovo of atualizarLivro;">
+        <div class="livro">
+            <h1>Titulo</h1>
+            <p>{{livroNovo.titulo}}</p>
+            <h1>Preço</h1>
+            <p>{{livroNovo.preco}}$</p>
+            <h1>Páginas</h1>
+            <p>{{livroNovo.quantidadePaginas}}</p>
+            <h1>Categoria</h1>
+            <p>{{livroNovo.categoria}}</p>
+        </div>
+
     </div>
 
 </div>

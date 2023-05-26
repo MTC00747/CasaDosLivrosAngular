@@ -22,6 +22,7 @@ import { AdicionarLivroComponent } from './pages/adicionar-livro/adicionar-livro
 import { CadastradoSucessoComponent } from './pages/cadastrado-sucesso/cadastrado-sucesso.component';
 import { ListarLivrosComponent } from './pages/listar-livros/listar-livros.component';
 import { RemovidoSucessoComponent } from './pages/removido-sucesso/removido-sucesso.component';
+import { AtualizarLivroComponent } from './pages/atualizar-livro/atualizar-livro.component';
 
 
 
@@ -41,6 +42,7 @@ import { RemovidoSucessoComponent } from './pages/removido-sucesso/removido-suce
     CadastradoSucessoComponent,
     ListarLivrosComponent,
     RemovidoSucessoComponent,
+    AtualizarLivroComponent,
   ],
   imports: [
     BrowserModule,

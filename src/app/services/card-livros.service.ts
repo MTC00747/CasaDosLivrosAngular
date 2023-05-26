@@ -13,7 +13,7 @@ export class CardLivrosService {
   token = localStorage.getItem('token')
 
   //Array para carrinho 
-
+  AtualizarItem : Livros[] = []
   itemsCarrinho: any[] = []
 
   valorTotalProduto: number = 0
@@ -60,6 +60,18 @@ export class CardLivrosService {
     }
     )
   }
+  listarLivroPorId(livro : Livros, id : number): Observable<any>{
+    return this.http.get(`${this.urlLogin}/${id}`,{
+      headers: new HttpHeaders(
+        {
+          "content-type": "application/json",
+          "Authorization": `Bearer ${this.token}`
+        }
+      ), observe: 'response'
+    }
+    )
+  }
+
   removerLivro(id:number){
    return this.http.delete(`${this.urlLogin}/${id}`, {
       headers: new HttpHeaders(
