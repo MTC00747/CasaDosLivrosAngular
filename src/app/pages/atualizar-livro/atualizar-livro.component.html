@@ -1,3 +1,46 @@
-<div *ngFor="let livro of livroAtualizar">
-    <h1>{{livro.titulo}}</h1>
+<div class="atualizar-livro_container">
+
+    <h1>Atualizar livro</h1>
+
+
+    <div class="Livros" *ngFor="let livro of livroAtualizar">
+        <div class="livro">
+            <h3>Titulo</h3>
+            <p>{{livro.titulo}}</p>
+            <h3>Preço</h3>
+            <p>{{livro.preco}}$</p>
+            <h3>Páginas</h3>
+            <p>{{livro.quantidadePaginas}}</p>
+            <h3>Categoria</h3>
+            <p>{{livro.categoria}}</p>
+        </div>
+
+        <form class="formulario">
+            <div class="form">
+                <h3>Titulo</h3>
+                <input type="text" id="titulo" label="Titulo" placeholder="Titulo"  [(ngModel)]="novoLivro.titulo" name="titulo">
+            </div>
+            <div class="form">
+                <h3>Categorias</h3>
+                <input type="text" id="categoria" label="Categoria" placeholder="Categoria"  [(ngModel)]="novoLivro.categoria" name="Categoria">
+            </div>
+            <div class="form">
+                <h3>Preço</h3>
+                <input type="number" id="preco" label="Preco" placeholder="Preço"  [(ngModel)]="novoLivro.preco" name="Preco">
+            </div>
+            <div class="form">
+                <h3>Quantidade de páginas</h3>
+                <input type="number" id="qtdPaginas" label="Paginas" placeholder=""  [(ngModel)]="novoLivro.quantidadePaginas" name="QuantidadePaginas">
+            </div>
+            <div class="form">
+                <h3>Imagem</h3>
+                <input type="text" id="imagem" label="imagem" placeholder="Url"  [(ngModel)]="novoLivro.imagem" name="imagem">
+            </div>
+            <button (click)="salvarAlteracoes(livro.id)">Salvar alterações</button>
+        </form>
+    </div>
+
 </div>
+
+       
+      

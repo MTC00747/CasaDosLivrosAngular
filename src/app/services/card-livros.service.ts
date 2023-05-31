@@ -91,4 +91,17 @@ export class CardLivrosService {
       }
     )
   }
+
+  modificarLivro(livro : Livros, id :number) : Observable<any> {
+    return this.http.put(`${this.urlLogin}/${id}`, JSON.stringify(livro), {
+
+      headers: new HttpHeaders(
+        {
+          "content-type": "application/json",
+          "Authorization": `Bearer ${this.token}`
+        }
+      ),
+      observe: 'response'
+    })
+  }
 }
